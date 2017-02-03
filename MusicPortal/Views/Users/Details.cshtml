@@ -1,0 +1,59 @@
+﻿@model MusicPortal.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusAdmin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusAdmin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusUser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

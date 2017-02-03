@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Music Portal</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+
+
+    <ul class="list-unstyled, list-inline">
+        <li class="active">
+            <h1>@Html.ActionLink("Music Portal", "Index", "Home")</h1> </li>
+        <li ><h4>@Html.ActionLink("Sign In", "SignIn", "Home")</h4></li>
+        <li><h4>@Html.ActionLink("Sign Up", "SignUp", "Home")</h4></li>
+    </ul>
+
+</div>
+    <br/><br/><br/>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+            <p>&copy; @DateTime.Now.Year - Music Portal</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
